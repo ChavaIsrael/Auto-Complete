@@ -12,4 +12,5 @@ wordsDB = {"u":[
     ]
 }
 
+
 print(archiveDB[2][13:])
