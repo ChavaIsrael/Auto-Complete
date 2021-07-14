@@ -1,6 +1,6 @@
 import sys
 sys.path.insert(0, '..')
-from classes.TextAndSource import TextAndSource
+from classes.textAndSource import TextAndSource
 
 # Singleton class
 class ArchiveDB:
@@ -14,25 +14,10 @@ class ArchiveDB:
         return cls.__instance
 
 
-    def addLine(self, lineText, Source):
+    def add_line(self, lineText, Source):
         self.__textDict[self.__idIndicator] = TextAndSource(lineText, Source)
-        print(self.__textDict[self.__idIndicator])
+        # print(self.__textDict[self.__idIndicator])
         self.__idIndicator += 1
 
-
-
-
-
-# archiveDB = {
-#     1:"fbhdjvk rbfkregbrjhg rfbrjkgrbgjr bri briugbrg",
-#     2:"hgifkhfgiuhgiuer fghuir huirtuigh. 4 98 br98g "
-# }
-
-
-# wordsDB = {"u":[
-#         {"uir":[(2,[13])]},
-#         {"uer":[(2,[20,25])]}
-#     ]
-# }
-
-# print(archiveDB[2][13:])
+    def get_db(self):
+        return self.__textDict

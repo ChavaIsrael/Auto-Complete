@@ -5,10 +5,10 @@ class TextAndSource:
         self.__text = text
         self.__source = source
 
-    def getText(self):
+    def get_text(self):
         return self.__text
 
-    def getsource(self):
+    def get_source(self):
         return self.__source
 
     
