@@ -6,11 +6,11 @@ class TrieNode:
         self.__sources = {}
         self.__EOW = False
 
-    def get_letter(self):
-        return self.__letter
+    # def get_letter(self):
+    #     return self.__letter
 
-    def set_letter(self, letter):
-        self.__letter = letter
+    # def set_letter(self, letter):
+    #     self.__letter = letter
 
     def get_children(self):
         return self.__children      
@@ -31,7 +31,7 @@ class TrieNode:
         return self.__sources.get(source)
 
     def add_source(self, source, position):
-        self.__sources[source] = [position]
+        self.__sources.append(position)
 
     def add_position_to_source(self, source, position):
         self.__sources[source].append(position)

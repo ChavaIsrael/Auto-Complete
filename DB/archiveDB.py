@@ -1,6 +1,11 @@
 import sys
+
+
+
+from classes.TextAndSource import TextAndSource
+
 sys.path.insert(0, '..')
-from classes.textAndSource import TextAndSource
+
 
 # Singleton class
 class ArchiveDB:
