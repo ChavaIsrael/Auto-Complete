@@ -1,13 +1,9 @@
 import sys
-
-
-
-from classes.TextAndSource import TextAndSource
+from DB.textAndSource import TextAndSource
 
 sys.path.insert(0, '..')
 
 
-# Singleton class
 class ArchiveDB:
     __instance = None
     def __new__(cls):
@@ -21,7 +17,6 @@ class ArchiveDB:
 
     def add_line(self, lineText, Source):
         self.__textDict[self.__idIndicator] = TextAndSource(lineText, Source)
-        # print(self.__textDict[self.__idIndicator])
         self.__idIndicator += 1
 
     def get_db(self):
